@@ -1,4 +1,4 @@
-# Research-Harness
+# Agentic-Index-Research-Harness
 
 This repository implements an **agentic research harness for systematic multi-asset ETF index construction**, covering 50+ ETFs across equities, rates, credit, and commodities. The framework combines autonomous hypothesis generation with rule-based experiment execution and validation.
 
