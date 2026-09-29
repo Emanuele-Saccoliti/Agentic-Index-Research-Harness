@@ -1,0 +1,11 @@
+{
+  "description": "Hand-calculated synthetic monthly benchmarks, initial NAV 1000, zero costs and cash returns",
+  "sixty_forty": {
+    "nav": [1000.0, 1000.0, 1060.0, 1126.0, 1171.04, 1306.16],
+    "gross_traded_notional": [0.0, 1000.0, 0.0, 100.8, 0.0, 0.0]
+  },
+  "equal_weight": {
+    "nav": [1000.0, 1000.0, 1050.0, 1105.0, 1160.25, 1270.75],
+    "gross_traded_notional": [0.0, 1000.0, 0.0, 105.0, 0.0, 0.0]
+  }
+}

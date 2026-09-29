@@ -10,3 +10,5 @@ dist/
 build/
 # Synthetic local CLI storage, never the research record directories.
 .etf-harness/
+# Reproducible synthetic acceptance ledgers and Parquet round trips.
+output/p2/

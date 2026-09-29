@@ -129,3 +129,21 @@ The owner-approved D014–D017 clarifications supplement the research path above
 P1 represents the full legal research state graph but implements only synthetic planning, proposal, approval, administrative rejection and invalidation. Synthetic experiment registration at `APPROVED` exercises budget controls without claiming that implementation, development evaluation, falsification or audit happened. There is no generic transition command, research executor or path to `ACCEPTED` in P1. Multiple hypotheses may be proposed, but only one selected hypothesis advances in this slice. Later phases must define multiple-hypothesis execution explicitly.
 
 Controller clocks and record-ID factories are injectable. Given the same history and input artifacts, policy, approval digests, state and budget projections are deterministic. Runtime identifiers and timestamps are recorded inputs, not financial calculations.
+
+## P2 deterministic core
+
+`data.models` defines immutable, fully aligned price panels and explicit UTC
+session calendars. `data.providers.PriceProvider` is the read interface;
+`LocalPriceProvider` implements the same normalized contract for CSV and Parquet.
+Pandas/PyArrow stay at the file boundary. No calendar, price fill, currency
+conversion or dividend adjustment is inferred.
+
+`benchmarks` constructs fixed allocations. `backtest.schedule` maps observations
+to the next session close using only the declared calendar. `backtest.engine`
+marks existing holdings, accrues cash, solves post-fee target notionals and emits
+an immutable session ledger. The engine does not import controller services or
+write registries. There is no general financial-execution CLI command.
+
+`scripts/verify_p2.py` exercises only checked-in synthetic fixtures, exports
+reproducible ledgers and checks independent expected values. Approved conventions,
+numerical identities and limitations are in [`P2_PORTFOLIO_CORE.md`](P2_PORTFOLIO_CORE.md).

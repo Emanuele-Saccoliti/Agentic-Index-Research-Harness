@@ -89,7 +89,8 @@ Exact numerical values are locked before candidate testing.
 
 ## Return conventions
 
-The implementation must define and test:
+P2 defines and tests the following under owner-approved D018. See
+[`P2_PORTFOLIO_CORE.md`](P2_PORTFOLIO_CORE.md) for the exact rules and accounting equations:
 
 - adjusted total-return price convention;
 - signal observation date;

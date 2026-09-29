@@ -2,9 +2,45 @@
 
 ## Current phase
 
-**P1 — Campaign Controller complete.**
+**P2 — Deterministic portfolio core complete.**
 
-Completed on 2026-09-29 after the owner approved the implementation plan and D014–D017 clarifications. No real research campaign was run.
+Completed on 2026-09-30 after the owner authorized P2 and approved financial
+conventions D018 in this chat. No real research campaign was run.
+
+## P2 delivery and acceptance
+
+- Validated, immutable adjusted total-return price records and explicit UTC sessions;
+- local CSV/Parquet provider with exact calendar/asset alignment and no imputation;
+- long-only accounting with holdings, cash accrual, PnL and per-session ledgers;
+- next-session execution and buy-and-hold, daily-session, monthly, quarterly schedules;
+- self-financing proportional costs on actual traded notional, including initial investment;
+- fixed 60/40, equal-weight and equal-sleeve baselines;
+- independent fixture expectations, accounting identities and no-look-ahead tests.
+
+Validation: **222 tests passed (118 P1 + 104 P2)**; the standalone fixture
+reproduction, Ruff lint/format, strict mypy and Quant Coding audit passed.
+The complete ledgers reproduce from CSV and Parquet. See
+[`docs/P2_PORTFOLIO_CORE.md`](docs/P2_PORTFOLIO_CORE.md) for acceptance evidence and
+[`MEMORY.md`](MEMORY.md) for the session record.
+
+```bash
+.venv/bin/python -m pytest -q tests/portfolio
+.venv/bin/python scripts/verify_p2.py
+.venv/bin/python -m pytest -q
+.venv/bin/ruff check src tests scripts
+.venv/bin/ruff format --check src tests scripts
+.venv/bin/mypy src scripts
+.venv/bin/python -m pip check
+```
+
+P2 is a library/fixture slice. The controller remains synthetic-only and has no
+financial executor. Risk-parity and volatility-controlled benchmarks still need
+P4 estimation primitives. Public data, point-in-time provenance, universe
+eligibility and research execution are later milestones.
+
+## P1 completion record
+
+Completed on 2026-09-29 after the owner approved D014–D017. Historical P1 evidence follows.
 
 ## Delivered
 
@@ -45,7 +81,12 @@ Tests include illegal transitions, terminal immutability, missing/mismatched app
 
 ## Next bounded task
 
-Plan P2's deterministic fixture-based portfolio core. Read the finance/data specifications before proposing normalized price schemas, portfolio accounting, rebalance timing and transaction-cost interfaces. Define accounting-identity and no-look-ahead tests before implementation. Do not select public data, implement strategies, start a research campaign or activate the optional wrapper as part of that planning task.
+P3: design and run a public-data availability diagnostic, then implement the
+provider adapter, snapshot/cache manifest, ETF metadata, sleeve taxonomy and
+eligibility rules. Resolve provider/snapshot policy and exact universe membership
+using data availability and fixed benchmarks, never candidate results. Preserve
+D018; ask the owner before changing financial conventions or freezing protected
+research choices. P3 has not started in this session.
 
 ## Not yet authorized
 
