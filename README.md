@@ -35,7 +35,7 @@ The wrapper is intentionally deferred until the interactive protocol is stable. 
 
 ## Start here
 
-1. Read [`STATUS.md`](STATUS.md) and [`MEMORY.md`](MEMORY.md).
+1. Read [`STATUS.md`](STATUS.md).
 2. Use the source tree and tests as the executable project specification.
 
 ## P2: deterministic portfolio core
