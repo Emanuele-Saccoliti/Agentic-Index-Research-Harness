@@ -9,9 +9,34 @@ The project combines:
 - **deterministic governance**: a Python Campaign Controller owns states, permissions, budgets, evidence and approvals;
 - **responsible evaluation**: preregistration, trial accounting, walk-forward analysis, risk-matched controls and explicit negative outcomes.
 
-## Research question
-
-> Can a transparent, rules-based multi-asset ETF index achieve more robust out-of-sample performance than static and risk-matched benchmarks after costs, without excessive turnover, concentration or parameter instability?
+```
+Research Question
+       ↓
+┌────────────────────────────────────┐
+│ RESEARCH HARNESS                   │
+│                                    │
+│  Hypothesis Generation             │
+│          ↓                         │
+│  Experiment Design                 │
+│          ↓                         │
+│  Human Approval                    │
+│  hypothesis · parameters · budget  │
+│          ↓                         │
+│  Deterministic Execution           │
+│  data · strategy · benchmarks      │
+│          ↓                         │
+│  Validation / Falsification        │
+│          ↓                         │
+│  Audit                             │
+│          ↓                         │
+│  Evidence-based Decision           │
+│  accepted / rejected /             │
+│  inconclusive / invalid            │
+└────────────────────────────────────┘
+       ↓
+Audited ETF / Index Methodology
++ Reproducible Evidence
+```
 
 ## Operating model
 
