@@ -34,8 +34,7 @@ Research Question
 │  inconclusive / invalid            │
 └────────────────────────────────────┘
        ↓
-Audited ETF / Index Methodology
-+ Reproducible Evidence
+Audited ETF / Index Strategy
 ```
 
 ## Operating model
